@@ -11,11 +11,11 @@ cd to the Dockerfile directory
 
 run commands:
 `docker login`
-`docker build -t tmlts/r-h2o-tidyverse . `
+`docker build -t ikanx101/r-custom . `
 
 test the container:
 
-docker run --rm -p 8787:8787 -e USER=guest -e PASSWORD=guest -v /Users/vladdsm/Shared:/home/guest/r-docker tmlts/r-tidyverse-h2o
+docker run --rm -p 8787:8787 -e USER=ikanx101 -e PASSWORD=suntea101 -v /mnt/chromeos/removable/Workstation ikanx101/r-custom
 
 
 
