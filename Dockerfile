@@ -9,9 +9,6 @@ RUN mkdir -p /01_data
 RUN mkdir -p /02_code
 RUN mkdir -p /03_output
 
-## copy files
-COPY 02_code/install_packages.R /install_packages.R
-
 RUN apt-get clean all && \
 	apt-get update && \
 	apt-get upgrade -y && \
@@ -37,28 +34,22 @@ RUN apt-get clean all && \
         lib32gcc-s1 \
         lib32stdc++6 \
         libc6-i386 \
-        libclang-10-dev \
-        libclang-common-10-dev \
-        libclang-dev \
-        libclang1-10 \
         libllvm10 \ 
         libobjc-9-dev \
         libobjc4 \ 
-		libhdf5-dev \
-		libcurl4-gnutls-dev \
-		libssl-dev \
-		libxml2-dev \
-		libpng-dev \
-		libxt-dev \
-		zlib1g-dev \
-		libbz2-dev \
-		liblzma-dev \
-		libglpk40 \
-		libgit2-dev \
-	&& apt-get clean all && \
-	apt-get purge && \
-	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+	libhdf5-dev \
+	libcurl4-gnutls-dev \
+	libssl-dev \
+	libxml2-dev \
+	libpng-dev \
+	libxt-dev \
+	zlib1g-dev \
+	libbz2-dev \
+	liblzma-dev \
+	libglpk40 \
+	libgit2-dev \
+	libllvm10 \
     
     
 ## install packages 
-RUN Rscript /install_packages.R
+RUN Rscript install_packages.R
