@@ -1,28 +1,16 @@
-# code to install packages in the docker file
-install.packages("tidyverse")
-install.packages("lubridate")
-install.packages("ReinforcementLearning")
-install.packages("magrittr")
-install.packages("plotly")
-install.packages("openssl")
-install.packages("rvest")
-install.packages("qdap")
-install.packages("stringr")
-install.packages("twitteR")
-install.packages("syuzhet")
-install.packages("scales")
-install.packages("reshape2")
+# instalasi
+rm(list=ls())
+pakets = installed.packages()
+pakets_needed = c("dplyr","tidyr","readxl","janitor","openxlsx","stringr",
+                  "knitr","checkmate","htmlwidgets","htmltools","htmlTable",
+                  "rvest","ggplot2","txtplot","tidytext","reshape2",
+                  "readxl","qpdf","ggpubr","ggrepel","ROI","ompr","ompr.roi",
+                  "ROI.plugin.glpk","rmarkdown","Ryacas","languageserver","httpgd",
+                  "forecast","TTR","tseries","fpp","TSstudio","padr","MLmetrics",
+                  "RSelenium","gganimate","av","multidplyr","telegram.bot","telegram")
+necessary = setdiff(pakets_needed,pakets)
+if(length(necessary) > 0){
+  for(i in 1:length(necessary)) install.packages(necessary[i])
+} else print("+++ semua libraries sudah ready +++")
 
-# The following two commands remove any previously installed H2O packages for R.
-if ("package:h2o" %in% search()) { detach("package:h2o", unload=TRUE) }
-if ("h2o" %in% rownames(installed.packages())) { remove.packages("h2o") }
-
-# Next, we download packages that H2O depends on.
-pkgs <- c("RCurl","jsonlite")
-for (pkg in pkgs) {
-if (! (pkg %in% rownames(installed.packages()))) { install.packages(pkg) }
-}
-
-# Now we download, install and initialize the H2O package for R.
-install.packages("h2o", type="source", repos="http://h2o-release.s3.amazonaws.com/h2o/rel-yates/1/R")
-
+rm(list=ls())
