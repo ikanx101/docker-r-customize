@@ -1,8 +1,20 @@
 # Command to run the container
 
-# change directory into the docker file path
-cd Documents/GitHub/docker-r-h2o-tidyverse
-
-# run this container while mapping the folders
-docker run --rm -p 8787:8787 -e USER=guest -e PASSWORD=guest -v /Users/testmachine/Shared:/home/guest/r-docker tmlts/r-tidyverse-h2o
-
+docker run --rm \
+           -p 8888:8787 \
+           -v /mnt/chromeos/removable/Workstation \
+           -e USER=guest
+           -e PASSWORD=password \
+           -e USERID=1001 \
+           -e GROUPID=1001 \
+           ikanx101/r-custom:latest
+           
+           
+docker run --rm \
+           -p 8888:8787 \
+           -v /mnt/chromeos/removable/Workstation \
+           -e USER=guest
+           -e PASSWORD=password \
+           -e USERID=1001 \
+           -e GROUPID=1001 \
+           ikanx101/rstudio:4.0.5
