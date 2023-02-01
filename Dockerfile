@@ -7,7 +7,6 @@ RUN apt-get clean all && \
 	apt-get upgrade -y && \
 	apt-get install -y \
 		libhdf5-dev \
-		libcurl4-gnutls-dev \
 		libssl-dev \
 		libxml2-dev \
 		libpng-dev \
@@ -20,7 +19,6 @@ RUN apt-get clean all && \
 		git \
 		pandoc \
 		libgdal-dev \
-		libcurl4-openssl-dev \
 		cmake \
 		libglpk-dev \
 		libfontconfig1-dev \
