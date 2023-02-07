@@ -88,11 +88,16 @@ docker run -d -p 4445:4444 selenium/standalone-firefox
 ```
 docker run -d -p 4445:4444 --name myselcontainer selenium/standalone-firefox
 
+# versi full
 docker run -ti --rm -p 8888:8787 --link=myselcontainer \
            -e USER=ikanx101 \
            -e PASSWORD=ikanx101 \
            -e USERID=1001 \
            -e GROUPID=1001 \
            ikanx101/r-custom:latest
+           
+# versi simple di windows
+docker run --rm -p 8888:8787 --link=myselcontainer ikanx101/r-custom:latest
+
 ```
 
