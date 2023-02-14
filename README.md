@@ -98,7 +98,7 @@ docker run -ti --rm -p 8888:8787 --link=myselcontainer \
            
 # versi simple di windows
 # username: rstudio
-docker run --rm -p 8888:8787 --link=myselcontainer PASSWORD=ikanx101 ikanx101/r-custom:latest
+docker run --rm -p 8888:8787 --link=myselcontainer -e PASSWORD=ikanx101 ikanx101/r-custom:latest
 
 ```
 
