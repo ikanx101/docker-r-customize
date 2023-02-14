@@ -102,3 +102,12 @@ docker run --rm -p 8888:8787 --link=myselcontainer PASSWORD=ikanx101 ikanx101/r-
 
 ```
 
+Ini yang harus dimasukkan ke dalam RScript-nya:
+
+```
+library(rvest)
+library(RSelenium)
+remDr <- remoteDriver(remoteServerAddr = "myselcontainer", 
+                      port = 4444L, browserName = "firefox")
+remDr$open()
+```
