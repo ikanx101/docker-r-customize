@@ -9,33 +9,7 @@ Berikut adalah langkah-langkahnya:
 - Buat dan modifikasi _file_ `Dockerfile`. Saya memasukan beberapa _presets_ seperti ini:
     - Versi __R__ terbaru.
     - _Libraries_ linux untuk _web scrape_ dan GLPK.
-    - _Libraries_ __R__ berikut ini:
-        - 'dplyr',
-        - 'tidyr',
-        - 'readxl',
-        - 'janitor',
-        - 'openxlsx',
-        - 'stringr',
-        - 'knitr',
-        - 'checkmate',
-        - 'htmlwidgets',
-        - 'rvest',
-        - 'ggplot2',
-        - 'txtplot',
-        - 'tidytext',
-        - 'reshape2',
-        - 'readxl',
-        - 'ggpubr',
-        - 'ggrepel',
-        - 'ROI',
-        - 'ompr',
-        - 'ompr.roi',
-        - 'ROI.plugin.glpk',
-        - 'rmarkdown',
-        - 'RSelenium',
-        - 'gganimate',
-        - 'av'
-
+    - _Libraries_ __R__ yang sering saya pakai.
 - Setelah itu kita _login_ ke _Docker server_ dengan perintah berikut:
 
 ```
