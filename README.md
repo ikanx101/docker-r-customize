@@ -57,6 +57,15 @@ docker pull selenium/standalone-firefox
 docker run -d -p 4445:4444 selenium/standalone-firefox
 ```
 
+Ini untuk memanggilnya di __R__:
+
+```
+library(rvest)
+library(RSelenium)
+remote_driver = remoteDriver(remoteServerAddr = "localhost", port = 4445L, browserName = "firefox")
+remote_driver$open()
+```
+
 # Untuk Menghubungkan Dua Containers
 
 ```
@@ -81,7 +90,7 @@ Ini yang harus dimasukkan ke dalam RScript-nya:
 ```
 library(rvest)
 library(RSelenium)
-remDr <- remoteDriver(remoteServerAddr = "myselcontainer", 
-                      port = 4444L, browserName = "firefox")
-remDr$open()
+remote_driver = remoteDriver(remoteServerAddr = "myselcontainer", 
+                             port = 4444L, browserName = "firefox")
+remote_driver$open()
 ```
