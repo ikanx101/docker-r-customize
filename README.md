@@ -2,6 +2,8 @@
 
 _Repository_ ini berisi _setting_ awal saya membuat _Docker container_ untuk R Studio Server.
 
+Untuk menginstall Docker di Ubuntu, silakan _refer_ ke situs [ini](https://docs.docker.com/engine/install/ubuntu/). 
+
 ## Cara membuat _container_
 
 Berikut adalah langkah-langkahnya:
@@ -50,7 +52,9 @@ Jangan lupa mengganti _username_ dan _password_ sesuai dengan kebutuhan.
 
 ---  
 
-# _Firefox_
+# Cara Run _Container_ Selain __R Studio Server__
+
+## _Firefox Only_
 
 ```
 docker pull selenium/standalone-firefox
@@ -66,7 +70,9 @@ remote_driver = remoteDriver(remoteServerAddr = "localhost", port = 4445L, brows
 remote_driver$open()
 ```
 
-# Untuk Menghubungkan Dua Containers
+## Untuk Menghubungkan Dua _Containers_
+
+Biasa digunakan untuk `mesin` yang tidak mau di-_install_ __R__ ke _local_.
 
 ```
 docker run -d -p 4445:4444 --name myselcontainer selenium/standalone-firefox
