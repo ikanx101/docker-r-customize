@@ -1,5 +1,7 @@
 FROM rocker/rstudio:4.2.2
 
+ENV USER="rstudio" PASSWORD="rstudio" ROOT="TRUE"
+
 MAINTAINER ikanx101.com
 
 RUN apt-get clean all && \
