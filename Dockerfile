@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.2.2
+FROM rocker/rstudio:4.3.0
 
 ENV USER="ikanx101" PASSWORD="ikanx101" ROOT="TRUE"
 
