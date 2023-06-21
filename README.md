@@ -58,7 +58,13 @@ Jangan lupa mengganti _username_ dan _password_ sesuai dengan kebutuhan.
 
 ```
 docker pull selenium/standalone-firefox
-docker run -d -p 4445:4444 selenium/standalone-firefox
+docker run -d -p 4445:4444 standalone-firefox:2.53.0
+
+# update per 21 Juni
+# firefox nya harus downgrade agar bisa dipakai
+docker pull selenium/standalone-firefox:4.8.0-20230123
+docker run -d -p 4445:4444 selenium/standalone-firefox:4.8.0-20230123
+
 ```
 
 Ini untuk memanggilnya di __R__:
