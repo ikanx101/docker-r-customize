@@ -40,7 +40,7 @@ Setelah ada di _Docker server_, kita bisa menggunakan _container_ tersebut di me
 docker pull ikanx101/r-custom:latest
 
 # run container
-docker run --rm -p 8888:8787 -v /mnt/chromeos/removable/Workstation \
+docker run --rm -p 8888:8787 -d \
            -e USER=ikanx101 \
            -e PASSWORD=ikanx101 \
            -e USERID=1001 \
