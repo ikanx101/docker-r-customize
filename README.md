@@ -45,8 +45,7 @@ docker run --rm -p 8888:8787 -d \
            -e PASSWORD=ikanx101 \
            -e USERID=1001 \
            -e GROUPID=1001 \
-           ikanx101/r-custom:latest \
-sleep infinity
+           ikanx101/r-custom:latest 
 ```
 
 Jangan lupa mengganti _username_ dan _password_ sesuai dengan kebutuhan.
