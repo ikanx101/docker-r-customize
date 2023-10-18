@@ -50,4 +50,8 @@ RUN Rscript -e "install.packages(c('scales','markdown','qcc','ggwordcloud','dbsc
 
 RUN Rscript -e "install.packages('rayshader')"
 
+RUN Rscript -e "install.packages('kableExtra')"
+
+RUN Rscript -e "install.packages('CGPfunctions')"
+
 WORKDIR /home/rstudio
