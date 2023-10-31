@@ -54,4 +54,6 @@ RUN Rscript -e "install.packages('kableExtra')"
 
 RUN Rscript -e "install.packages('CGPfunctions')"
 
+RUN Rscript -e "install.packages('CHAID', repos = 'http://R-Forge.R-project.org')"
+
 WORKDIR /home/rstudio
