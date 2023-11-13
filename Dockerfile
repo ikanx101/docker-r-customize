@@ -54,8 +54,10 @@ RUN Rscript -e "install.packages('kableExtra')"
 
 RUN Rscript -e "install.packages('CGPfunctions')"
 
-RUN Rscript -e "install.packages('gtrendsR')"
-
 RUN Rscript -e "install.packages('CHAID', repos = 'http://R-Forge.R-project.org')"
+
+RUN Rscript -e "install.packages('devtools')"
+
+RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
 WORKDIR /home/rstudio
