@@ -52,7 +52,7 @@ RUN Rscript -e "install.packages(c('rayshader','kableExtra','CGPfunctions','devt
 
 RUN Rscript -e "install.packages('CHAID', repos = 'http://R-Forge.R-project.org')"
 
-RUN Rscript -e "install.packages(c('bit64','data.table','gtools','zoo','rio','geosphere','geodist','exactextractr'))"
+RUN Rscript -e "install.packages(c('bit64','data.table','gtools','zoo','rio','geosphere','geodist'))"
 
 RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
