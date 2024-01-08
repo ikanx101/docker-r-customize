@@ -56,4 +56,6 @@ RUN Rscript -e "install.packages(c('bit64','data.table','gtools','zoo','rio','ge
 
 RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
+RUN Rscript -e "install.packages(c('epoxy'))"
+
 WORKDIR /home/rstudio
