@@ -46,6 +46,8 @@ RUN apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN pip3 install tidypolars
+
 RUN Rscript -e "install.packages(c('scales','markdown','qcc','ggwordcloud','dbscan','stringdist','ggraph','igraph','proxy','sf','maps','factoextra','tictoc','packrat','rsconnect','shinydashboard','shinymanager','shiny','nomnoml','xaringan','DT','caret','expss','rmdformats','TSP','dplyr','tidyr','readxl','janitor','openxlsx','stringr','knitr','checkmate','htmlwidgets','rvest','ggplot2','txtplot','tidytext','reshape2','readxl','ggpubr','ggrepel','ROI','ompr','ompr.roi','ROI.plugin.glpk','rmarkdown','RSelenium','gganimate','tm','raster'));"
 
 RUN Rscript -e "install.packages(c('rayshader','kableExtra','CGPfunctions','devtools','rgeos'))"
@@ -59,6 +61,8 @@ RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 RUN Rscript -e "install.packages(c('epoxy'))"
 
 RUN Rscript -e "install.packages(c('dtplyr'))"
+
+RUN Rscript -e "install.packages('polars', repos = 'https://rpolars.r-universe.dev')"
 
 RUN Rscript -e "install.packages('tidypolars',repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption('repos')))"
 
