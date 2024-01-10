@@ -64,8 +64,8 @@ RUN Rscript -e "install.packages(c('epoxy'))"
 
 RUN Rscript -e "install.packages(c('dtplyr'))"
 
-RUN Rscript -e "install.packages('polars', repos = 'https://rpolars.r-universe.dev')"
+#RUN Rscript -e "install.packages('polars', repos = 'https://rpolars.r-universe.dev')"
 
-RUN Rscript -e "install.packages('tidypolars',repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption('repos')))"
+#RUN Rscript -e "install.packages('tidypolars',repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption('repos')))"
 
 WORKDIR /home/rstudio
