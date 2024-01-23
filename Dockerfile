@@ -70,6 +70,10 @@ RUN Rscript -e "install.packages(c('bench'))"
 
 RUN Rscript -e "install.packages(c('leaflet'))"
 
+RUN Rscript -e "install.packages(c('Ryacas'))"
+
+RUN Rscript -e "install.packages(c('treemapify'))"
+
 RUN Rscript -e "install.packages('polars', repos = 'https://rpolars.r-universe.dev')"
 
 RUN Rscript -e "install.packages('tidypolars',repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption('repos')))"
