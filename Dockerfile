@@ -70,7 +70,7 @@ RUN Rscript -e "install.packages(c('dtplyr'))"
 
 RUN Rscript -e "install.packages(c('bench'))"
 
-RUN Rscript -e "install.packages(c('leaflet'))"
+RUN Rscript -e "install.packages(c('leaflet','leaflet.extras'))"
 
 RUN Rscript -e "install.packages(c('Ryacas'))"
 
