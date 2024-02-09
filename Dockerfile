@@ -72,7 +72,7 @@ RUN Rscript -e "install.packages(c('bench'))"
 
 RUN Rscript -e "install.packages(c('leaflet','leaflet.extras'))"
 
-RUN Rscript -e "install.packages(c('Ryacas'))"
+RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR'))"
 
 RUN Rscript -e "install.packages(c('treemapify'))"
 
