@@ -80,7 +80,7 @@ RUN Rscript -e "install.packages(c('treemapify'))"
 
 RUN Rscript -e "install.packages(c('ggthemes'))"
 
-RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames'))"
+RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4'))"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
