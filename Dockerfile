@@ -42,6 +42,7 @@ RUN apt-get clean all && \
     		python3-dev \
       		python3-pip \
 		python3-venv \
+  		gdebi-core \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -50,7 +51,11 @@ RUN pip3 install tidypolars
 
 RUN pip install polars
 
-RUN pip install git+https://github.com/quarto-dev/quarto-cli
+RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+
+RUN gdebi quarto-linux-amd64.deb
+
+# RUN pip install git+https://github.com/quarto-dev/quarto-cli
 
 RUN quarto install tinytex
 
