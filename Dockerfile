@@ -43,6 +43,7 @@ RUN apt-get clean all && \
       		python3-pip \
 		python3-venv \
   		gdebi-core \
+    		curl \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
