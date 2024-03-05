@@ -52,11 +52,11 @@ RUN pip3 install tidypolars
 
 RUN pip install polars
 
-RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+# doesnt work
+# RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
+# RUN gdebi quarto-linux-amd64.deb
 
-RUN gdebi quarto-linux-amd64.deb
-
-# RUN pip install git+https://github.com/quarto-dev/quarto-cli
+RUN pip install git+https://github.com/quarto-dev/quarto-cli
 
 RUN quarto install tinytex
 
