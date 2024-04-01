@@ -88,7 +88,16 @@ RUN Rscript -e "install.packages(c('treemapify'))"
 
 RUN Rscript -e "install.packages(c('ggthemes','tidyverse'))"
 
+RUN Rscript -e "install.packages(c('reticulate','keras','text2vec'))"
+
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4'))"
+
+# https://tensorflow.rstudio.com/install/
+RUN Rscript -e "keras::install_keras()"
+RUN Rscript -e "remotes::install_github('rstudio/tensorflow')"
+RUN Rscript -e "reticulate::install_python()"
+RUN Rscript -e "library(tensorflow);install_tensorflow(envname = 'r-tensorflow')"
+RUN Rscript -e "keras::install_keras()"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
