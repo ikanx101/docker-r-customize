@@ -42,15 +42,12 @@ RUN apt-get clean all && \
     		python3-dev \
       		python3-pip \
 		python3-venv \
-  		gdebi-core \
+  		libpython3-dev \
+    		gdebi-core \
     		curl \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-RUN pip3 install tidypolars
-
-RUN pip install polars
 
 # doesnt work
 # RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
@@ -88,21 +85,16 @@ RUN Rscript -e "install.packages(c('treemapify'))"
 
 RUN Rscript -e "install.packages(c('ggthemes','tidyverse'))"
 
-RUN Rscript -e "install.packages(c('reticulate','keras','text2vec'))"
-
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4'))"
-
-# https://tensorflow.rstudio.com/install/
-RUN Rscript -e "keras::install_keras()"
-RUN Rscript -e "remotes::install_github('rstudio/tensorflow')"
-RUN Rscript -e "reticulate::install_python()"
-RUN Rscript -e "library(tensorflow);install_tensorflow(envname = 'r-tensorflow')"
-RUN Rscript -e "keras::install_keras()"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
-RUN Rscript -e "install.packages('polars', repos = 'https://rpolars.r-universe.dev')"
-
-RUN Rscript -e "install.packages('tidypolars',repos = c('https://etiennebacher.r-universe.dev/bin/linux/jammy/4.3', getOption('repos')))"
+# https://tensorflow.rstudio.com/install/
+RUN pip install tensorflow
+RUN pip install keras
+RUN Rscript -e "install.packages(c('reticulate','keras','text2vec','tensorflow'))"
+RUN Rscript -e "library(reticulate); virtualenv_create('r-tensorflow', python = install_python())"
+RUN Rscript -e "tensorflow::install_tensorflow()"
+RUN Rscript -e "keras::install_keras()"
 
 WORKDIR /home/rstudio
