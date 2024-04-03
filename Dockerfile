@@ -92,6 +92,7 @@ RUN Rscript -e "webshot::install_phantomjs()"
 # https://tensorflow.rstudio.com/install/
 RUN pip install tensorflow
 RUN pip install keras
+RUN pip pip install tensorrt
 RUN Rscript -e "install.packages(c('reticulate','keras','text2vec','tensorflow'))"
 RUN Rscript -e "library(reticulate); virtualenv_create('r-tensorflow', python = install_python())"
 RUN Rscript -e "tensorflow::install_tensorflow()"
