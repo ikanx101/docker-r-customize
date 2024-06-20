@@ -71,7 +71,7 @@ RUN Rscript -e "install.packages(c('forecast','TTR','tseries','fpp','TSstudio','
 
 RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
-RUN Rscript -e "install.packages(c('epoxy'))"
+RUN Rscript -e "install.packages(c('epoxy','lavaan','psych'))"
 
 RUN Rscript -e "install.packages(c('dtplyr','ggridges'))"
 
