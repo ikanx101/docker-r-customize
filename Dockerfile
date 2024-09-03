@@ -75,7 +75,7 @@ RUN Rscript -e "install.packages(c('epoxy','lavaan','psych'))"
 
 RUN Rscript -e "install.packages(c('dtplyr','ggridges'))"
 
-RUN Rscript -e "install.packages(c('bench'))"
+RUN Rscript -e "install.packages(c('bench','formattable'))"
 
 RUN Rscript -e "install.packages(c('leaflet','leaflet.extras'))"
 
