@@ -83,7 +83,7 @@ RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR'))"
 
 RUN Rscript -e "install.packages(c('treemapify','GWalkR'))"
 
-RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc'))"
+RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf'))"
 
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4'))"
 
