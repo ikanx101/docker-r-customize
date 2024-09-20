@@ -73,7 +73,7 @@ RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
 RUN Rscript -e "install.packages(c('epoxy','lavaan','psych'))"
 
-RUN Rscript -e "install.packages(c('dtplyr','ggridges'))"
+RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR'))"
 
 RUN Rscript -e "install.packages(c('bench','formattable'))"
 
