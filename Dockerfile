@@ -49,6 +49,8 @@ RUN apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN apt-get install -y  libudunits2-dev libgdal-dev libgeos-dev libproj-dev
+
 # doesnt work
 # RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
 # RUN gdebi quarto-linux-amd64.deb
