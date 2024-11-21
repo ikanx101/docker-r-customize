@@ -93,17 +93,17 @@ RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegra
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
+# https://tensorflow.rstudio.com/install/
+RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))"
+RUN Rscript -e "install.packages(c('DALEX'))"
+RUN Rscript -e "library(reticulate); virtualenv_create('r-tensorflow', python = install_python())"
+RUN Rscript -e "tensorflow::install_tensorflow()"
+
 RUN python3 -m venv .venv
 RUN source .venv/bin/activate
 RUN pip install tensorflow
 RUN pip install keras
 RUN pip install tensorrt
 RUN deactivate
-
-# https://tensorflow.rstudio.com/install/
-RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))"
-RUN Rscript -e "install.packages(c('DALEX'))"
-RUN Rscript -e "library(reticulate); virtualenv_create('r-tensorflow', python = install_python())"
-RUN Rscript -e "tensorflow::install_tensorflow()"
 
 WORKDIR /home/rstudio
