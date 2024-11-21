@@ -94,7 +94,7 @@ RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegra
 RUN Rscript -e "webshot::install_phantomjs()"
 
 RUN python3 -m venv myenv
-RUN source myenv/bin/activate
+RUN source ~/myenv/bin/activate
 RUN pip install tensorflow
 RUN pip install keras
 RUN pip install tensorrt
