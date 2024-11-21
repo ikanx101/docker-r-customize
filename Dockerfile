@@ -54,10 +54,10 @@ RUN apt-get -y update && apt-get install -y  libudunits2-dev libgdal-dev libgeos
 RUN apt-get -y update && apt-get install -y python3-pip
 
 # doesnt work
-# RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
-# RUN gdebi quarto-linux-amd64.deb
+RUN curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.37/quarto-1.6.37-linux-amd64.deb
+RUN gdebi quarto-1.6.37-linux-amd64.deb
 
-RUN pip install git+https://github.com/quarto-dev/quarto-cli
+# RUN pip install git+https://github.com/quarto-dev/quarto-cli
 
 RUN quarto install tinytex
 
