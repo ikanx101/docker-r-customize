@@ -99,11 +99,11 @@ RUN Rscript -e "install.packages(c('DALEX'))"
 RUN Rscript -e "library(reticulate); virtualenv_create('r-tensorflow', python = install_python())"
 RUN Rscript -e "tensorflow::install_tensorflow()"
 
-RUN python3 -m venv .venv
-RUN source .venv/bin/activate
-RUN pip install tensorflow
-RUN pip install keras
-RUN pip install tensorrt
-RUN deactivate
+#RUN python3 -m venv .venv
+#RUN source .venv/bin/activate
+#RUN pip install tensorflow
+#RUN pip install keras
+#RUN pip install tensorrt
+#RUN deactivate
 
 WORKDIR /home/rstudio
