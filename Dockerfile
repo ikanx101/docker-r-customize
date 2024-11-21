@@ -93,6 +93,7 @@ RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegra
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
+RUN apt-get -y update && apt-get install -y python-pip
 RUN pip install tensorflow
 RUN pip install keras
 RUN pip install tensorrt
