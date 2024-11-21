@@ -93,10 +93,12 @@ RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegra
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
-RUN apt-get -y update && apt-get install -y python3-pip
+RUN python3 -m venv myenv
+RUN source myenv/bin/activate
 RUN pip install tensorflow
 RUN pip install keras
 RUN pip install tensorrt
+RUN deactivate
 
 # https://tensorflow.rstudio.com/install/
 RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))"
