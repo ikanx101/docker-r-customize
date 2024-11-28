@@ -89,7 +89,7 @@ RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x'))"
 
 RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','googleway','osrm'))"
 
-RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4','tidygeocoder'))"
+RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4','tidygeocoder','olsrr'))"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
