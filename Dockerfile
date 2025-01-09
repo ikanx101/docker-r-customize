@@ -1,8 +1,6 @@
 FROM rocker/rstudio:latest
 
-ENV USER="ikanx101" PASSWORD="ikanx101" ROOT="TRUE"
-
-MAINTAINER ikanx101.com
+ENV ROOT="TRUE"
 
 RUN apt-get clean all && \
 	apt-get update && \
