@@ -94,7 +94,7 @@ RUN Rscript -e "webshot::install_phantomjs()"
 # https://tensorflow.rstudio.com/install/
 RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow','keras'))"
 RUN Rscript -e "install.packages(c('DALEX'))"
-RUN Rscript -e "library(reticulate); virtualenv_create('r-tensorflow', python = install_python())"
+RUN Rscript -e "library(reticulate)
 RUN Rscript -e "tensorflow::install_tensorflow()"
 
 #RUN python3 -m venv .venv
