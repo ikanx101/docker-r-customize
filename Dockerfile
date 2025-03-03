@@ -83,7 +83,7 @@ RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote'))"
 
 RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR'))"
 
-RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x'))"
+RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x','Robyn'))"
 
 RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','googleway','osrm','lsa','tidymodels'))"
 
