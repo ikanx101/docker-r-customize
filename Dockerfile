@@ -89,6 +89,8 @@ RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','g
 
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4','tidygeocoder','olsrr','fpc','Rtsne'))"
 
+RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics'))"
+
 RUN Rscript -e "webshot::install_phantomjs()"
 
 # https://tensorflow.rstudio.com/install/
