@@ -97,7 +97,7 @@ RUN Rscript -e "install.packages("BiocManager")"
 RUN Rscript -e "BiocManager::install("EBImage")"
 
 # https://tensorflow.rstudio.com/install/
-RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow','keras'))"
+RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))" #'keras' kita ilangin dulu karena gak kompatibel skripnya
 RUN Rscript -e "install.packages(c('DALEX'))"
 RUN Rscript -e "tensorflow::install_tensorflow()"
 
