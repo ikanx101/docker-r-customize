@@ -43,6 +43,7 @@ RUN apt-get clean all && \
   		libpython3-dev \
     		gdebi-core \
     		curl \
+      		postgresql-client \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -71,7 +72,7 @@ RUN Rscript -e "install.packages(c('forecast','TTR','tseries','fpp','TSstudio','
 
 RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
-RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview'))"
+RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview','RPostgres'))"
 
 RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR'))"
 
