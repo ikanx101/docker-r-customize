@@ -92,8 +92,8 @@ RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics'))"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
-RUN Rscript -e "install.packages("BiocManager")"
-RUN Rscript -e "BiocManager::install("EBImage")"
+RUN Rscript -e "install.packages('BiocManager')"
+RUN Rscript -e "BiocManager::install('EBImage')"
 
 # https://tensorflow.rstudio.com/install/
 RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))" #'keras' kita ilangin dulu karena gak kompatibel skripnya
