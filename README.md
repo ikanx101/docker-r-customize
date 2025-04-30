@@ -40,12 +40,15 @@ Setelah ada di _Docker server_, kita bisa menggunakan _container_ tersebut di me
 docker pull ikanx101/r-custom:latest
 
 # run container
-docker run --rm -p 8888:8787 -d \
+docker run -p 8888:8787 -d --name ccc \
            -e USER=ikanx101 \
            -e PASSWORD=ikanx101 \
+           -e DISABLE_AUTH=true \
            -e USERID=1001 \
            -e GROUPID=1001 \
-           -v ~:/home/ikanx101 ikanx101/r-custom:latest 
+           -e ROOT=TRUE \
+           --restart unless-stopped \
+           -v /home/ikanx101/Documents:/home/rstudio ikanx101/r-custom:latest
 ```
 
 Jangan lupa mengganti _username_ dan _password_ sesuai dengan kebutuhan.
