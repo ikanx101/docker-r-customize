@@ -100,11 +100,14 @@ RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'
 RUN Rscript -e "install.packages(c('DALEX'))"
 RUN Rscript -e "tensorflow::install_tensorflow()"
 
-#RUN python3 -m venv .venv
-#RUN source .venv/bin/activate
-#RUN pip install tensorflow
-#RUN pip install keras
+WORKDIR /home/rstudio
+
+RUN python3 -m venv .venv
+RUN source .venv/bin/activate
+RUN pip install tensorflow
+RUN pip install keras
+RUN pip install transformers
+RUN pip install 'transformers[torch]'
+RUN pip install diffusers["torch"] transformers
 #RUN pip install tensorrt
 #RUN deactivate
-
-WORKDIR /home/rstudio
