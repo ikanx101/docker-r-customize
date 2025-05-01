@@ -100,6 +100,9 @@ RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'
 RUN Rscript -e "install.packages(c('DALEX'))"
 RUN Rscript -e "tensorflow::install_tensorflow()"
 
+# membuat working directory yang diperlukan
+RUN mkdir /home/rstudio
+
 RUN cp set_awal.sh /home/rstudio/set_awal.sh
 
 WORKDIR /home/rstudio
