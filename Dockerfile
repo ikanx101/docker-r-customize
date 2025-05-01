@@ -101,8 +101,8 @@ RUN Rscript -e "install.packages(c('DALEX'))"
 RUN Rscript -e "tensorflow::install_tensorflow()"
 
 # membuat working directory yang diperlukan
-RUN mkdir /home/rstudio
+RUN mkdir /home/rstudio/installer
 
-RUN cp set_awal.sh /home/rstudio/set_awal.sh
+RUN cp set_awal.sh /home/rstudio/installer/set_awal.sh
 
 WORKDIR /home/rstudio
