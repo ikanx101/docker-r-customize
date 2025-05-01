@@ -103,7 +103,7 @@ RUN Rscript -e "tensorflow::install_tensorflow()"
 WORKDIR /home/rstudio
 
 RUN python3 -m venv .venv
-RUN source .venv/bin/activate
+#RUN source .venv/bin/activate
 RUN pip install tensorflow
 RUN pip install keras
 RUN pip install transformers
