@@ -92,6 +92,8 @@ RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics'))"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
+RUN Rscript -e "install.packages('flowchart')"
+
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"
 
