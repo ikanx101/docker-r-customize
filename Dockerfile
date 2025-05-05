@@ -103,4 +103,4 @@ RUN Rscript -e "install.packages(c('DALEX'))"
 RUN Rscript -e "tensorflow::install_tensorflow()"
 WORKDIR /home/rstudio
 
-COPY set_awal.sh /home/rstudio/set_awal.sh
+COPY --chown=rstudio:rstudio set_awal.sh /home/rstudio/set_awal.sh
