@@ -92,7 +92,8 @@ RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics'))"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
-RUN Rscript -e "install.packages(c('flowchart','VGAM','ggsankey'))" # VGAM untuk pareto density plot
+RUN Rscript -e "install.packages(c('flowchart','VGAM'))" # VGAM untuk pareto density plot
+RUN Rscript remotes::install_github("davidsjoberg/ggsankey")
 
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"
