@@ -44,6 +44,7 @@ RUN apt-get clean all && \
     		gdebi-core \
     		curl \
       		postgresql-client \
+		libmagick++-dev \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
