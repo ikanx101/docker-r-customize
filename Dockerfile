@@ -98,7 +98,7 @@ RUN Rscript -e 'remotes::install_github("davidsjoberg/ggsankey")'
 
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"
-RUN Rscript -e "install.packages('gtExtras','gt')"
+RUN Rscript -e "install.packages(c('gtExtras','gt'))"
 
 # https://tensorflow.rstudio.com/install/
 RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))" #'keras' kita ilangin dulu karena gak kompatibel skripnya
