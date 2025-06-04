@@ -87,7 +87,7 @@ RUN Rscript -e "install.packages(c('bench','formattable','pscl'))"
 
 RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote'))"
 
-RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR'))"
+RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR','solitude'))"
 
 RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x','Robyn'))"
 
