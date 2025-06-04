@@ -45,6 +45,7 @@ RUN apt-get clean all && \
     		curl \
       		postgresql-client \
 		libmagick++-dev \
+  		libatk1.0-0 \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
