@@ -47,6 +47,11 @@ RUN apt-get clean all && \
 		libmagick++-dev \
   		libatk1.0-0 \
     		libatk-bridge2.0-0 \
+      		libxkbcommon-x11-0 \
+		libxcomposite-dev \
+ 	 	libxdamage1 \
+    		libxrandr2 \
+      		libgtk-3-0 \
 	&& apt-get clean all && \
 	apt-get purge && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -55,7 +60,6 @@ RUN apt-get -y update && apt-get install -y  libudunits2-dev libgdal-dev libgeos
 
 RUN apt-get -y update && apt-get install -y python3-pip
 
-# doesnt work
 RUN curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v1.6.42/quarto-1.6.42-linux-amd64.deb
 RUN gdebi quarto-1.6.42-linux-amd64.deb
 
