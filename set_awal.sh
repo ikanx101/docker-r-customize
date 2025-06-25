@@ -13,5 +13,6 @@ source .env/bin/activate
 pip install keras
 pip install tensorflow
 pip install transformers
+pip install sentence-transformers
 pip install 'transformers[torch]'
 pip install diffusers["torch"] transformers
