@@ -16,3 +16,4 @@ pip install transformers
 pip install sentence-transformers
 pip install 'transformers[torch]'
 pip install diffusers["torch"] transformers
+pip install tf-keras
