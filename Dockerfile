@@ -101,10 +101,11 @@ RUN Rscript -e "webshot::install_phantomjs()"
 
 RUN Rscript -e "install.packages(c('flowchart','VGAM'))" # VGAM untuk pareto density plot
 RUN Rscript -e 'remotes::install_github("davidsjoberg/ggsankey")'
+RUN Rscript -e 'remotes::install_github("yukiyanai/rgamer")'
 
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"
-RUN Rscript -e "install.packages(c('gtExtras','gt','gtsummary','flextable','queuecomputer','simmer','simmer.plot','torch','gameTheory'))"
+RUN Rscript -e "install.packages(c('gtExtras','gt','gtsummary','flextable','queuecomputer','simmer','simmer.plot','torch'))"
 
 # https://tensorflow.rstudio.com/install/
 RUN Rscript -e "install.packages(c('reticulate','keras3','text2vec','tensorflow'))" #'keras' kita ilangin dulu karena gak kompatibel skripnya
