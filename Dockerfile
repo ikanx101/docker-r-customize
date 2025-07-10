@@ -91,7 +91,7 @@ RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR','solitude'))"
 
 RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x','Robyn'))"
 
-RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','googleway','osrm','lsa','tidymodels'))"
+RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','googleway','osrm','lsa','tidymodels','Metrics'))"
 
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4','tidygeocoder','olsrr','fpc','Rtsne'))"
 
