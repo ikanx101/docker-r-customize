@@ -79,6 +79,8 @@ RUN Rscript -e "install.packages(c('forecast','TTR','tseries','fpp','TSstudio','
 
 RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
 
+RUN Rscript -e "devtools::install_github('ropensci/skimr')"
+
 RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview','RPostgres'))"
 
 RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext'))"
@@ -89,7 +91,7 @@ RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote'))"
 
 RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR','solitude'))"
 
-RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x','Robyn'))"
+RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x','Robyn','prophet'))"
 
 RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','googleway','osrm','lsa','tidymodels','Metrics'))"
 
