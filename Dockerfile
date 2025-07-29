@@ -99,6 +99,8 @@ RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegra
 
 RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics','memisc','summarytools','ellmer','DataExplorer','GGally'))"
 
+RUN Rscript -e "install.packages('ragnar')"
+
 RUN Rscript -e "webshot::install_phantomjs()"
 
 RUN Rscript -e "install.packages(c('flowchart','VGAM'))" # VGAM untuk pareto density plot
