@@ -97,9 +97,12 @@ RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','g
 
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4','tidygeocoder','olsrr','fpc','Rtsne'))"
 
-RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics','memisc','summarytools','ellmer','DataExplorer','GGally'))"
+RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics','memisc','summarytools','vtree','DataExplorer','GGally'))"
 
-RUN Rscript -e "install.packages('ragnar')"
+# install utk LLM dengan R
+RUN Rscript -e "install.packages('ellmer')"
+RUN Rscript -e "install.packages('pak')"
+RUN Rscript -e "pak::pak('tidyverse/ragnar')"
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
