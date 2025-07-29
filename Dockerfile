@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.3.3
+FROM rocker/rstudio:latest
 
 ENV ROOT="TRUE"
 
