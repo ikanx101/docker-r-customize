@@ -17,3 +17,4 @@ pip install sentence-transformers
 pip install 'transformers[torch]'
 pip install diffusers["torch"] transformers
 pip install tf-keras
+pip install duckdb
