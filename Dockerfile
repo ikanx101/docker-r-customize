@@ -104,6 +104,8 @@ RUN Rscript -e "install.packages('ellmer')"
 RUN Rscript -e "install.packages('pak')"
 RUN Rscript -e "pak::pak('tidyverse/ragnar')"
 RUN Rscript -e "pak::pak('posit-dev/shinychat/pkg-r')"
+RUN Rscript -e 'pak::pak("posit-dev/querychat/r-package")'
+
 
 RUN Rscript -e "webshot::install_phantomjs()"
 
