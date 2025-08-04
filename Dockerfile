@@ -110,6 +110,8 @@ RUN Rscript -e "webshot::install_phantomjs()"
 RUN Rscript -e "install.packages(c('flowchart','VGAM'))" # VGAM untuk pareto density plot
 RUN Rscript -e 'remotes::install_github("davidsjoberg/ggsankey")'
 RUN Rscript -e 'remotes::install_github("yukiyanai/rgamer")'
+# ada tambahan aidea
+RUN Rscript -e 'remotes::install_github("cpsievert/aidea")'
 
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"
