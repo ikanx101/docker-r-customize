@@ -87,7 +87,7 @@ RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext'))"
 
 RUN Rscript -e "install.packages(c('bench','formattable','pscl'))"
 
-RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote'))"
+RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote','ralger'))"
 
 RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR','solitude','shinyalert','shinyjs','openssl'))"
 
