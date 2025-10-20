@@ -85,7 +85,7 @@ RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview','RPostgres
 
 RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext'))"
 
-RUN Rscript -e "install.packages(c('bench','formattable','pscl'))"
+RUN Rscript -e "install.packages(c('bench','formattable','pscl','rstanarm','bayesplot','tidybayes'))"
 
 RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote','ralger'))"
 
