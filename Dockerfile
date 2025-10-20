@@ -97,7 +97,7 @@ RUN Rscript -e "install.packages(c('ggthemes','tidyverse','av','Hmisc','qpdf','g
 
 RUN Rscript -e "install.packages(c('wordcloud2','webshot','randomNames','telegram.bot','googlesheets4','tidygeocoder','olsrr','fpc','Rtsne'))"
 
-RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics','memisc','summarytools','vtree','DataExplorer','GGally','getwiki'))"
+RUN Rscript -e "install.packages(c('datarium','PerformanceAnalytics','memisc','summarytools','vtree','DataExplorer','GGally','getwiki','bayesm'))"
 
 # install utk LLM dengan R
 RUN Rscript -e "install.packages('ellmer')"
