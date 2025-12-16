@@ -15,6 +15,7 @@ Berikut adalah langkah-langkahnya:
 - Setelah itu kita _login_ ke _Docker server_ dengan perintah berikut:
 
 ```
+git clone https://github.com/ikanx101/docker-r-customize.git
 docker login
 ```
 
