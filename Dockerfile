@@ -83,7 +83,7 @@ RUN Rscript -e "devtools::install_github('ropensci/skimr')"
 
 RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview','RPostgres'))"
 
-RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext'))"
+RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext','ggmap','ggvoronoi'))"
 
 RUN Rscript -e "install.packages(c('bench','formattable','pscl','rstanarm','bayesplot','tidybayes'))"
 
