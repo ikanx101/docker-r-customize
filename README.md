@@ -10,7 +10,8 @@ Berikut adalah langkah-langkahnya:
 
 - Buat dan modifikasi _file_ `Dockerfile`. Saya memasukan beberapa _presets_ seperti ini:
     - Versi __R__ terbaru.
-    - _Libraries_ linux untuk _web scrape_ dan GLPK.
+    - _Libraries_ linux untuk _web scrape_ dan GLPK untuk optimisasi.
+    - _Libraries_ linux untuk _deep learning_ menggunakan `keras3` dan `tensorflow`.
     - _Libraries_ __R__ yang sering saya pakai.
 - Setelah itu kita _login_ ke _Docker server_ dengan perintah berikut:
 
