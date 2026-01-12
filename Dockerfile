@@ -83,7 +83,7 @@ RUN Rscript -e "devtools::install_github('ropensci/skimr')"
 
 RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview','RPostgres'))"
 
-RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext','ggmap'))"
+RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext','ggmap','flexsurv'))"
 
 RUN Rscript -e "remotes::install_github('garretrc/ggvoronoi', dependencies = FALSE)"
 
