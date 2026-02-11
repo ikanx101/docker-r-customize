@@ -73,7 +73,7 @@ RUN Rscript -e "install.packages(c('rayshader','kableExtra','CGPfunctions','devt
 
 RUN Rscript -e "install.packages('CHAID', repos = 'http://R-Forge.R-project.org')"
 
-RUN Rscript -e "install.packages(c('bit64','data.table','gtools','zoo','rio','geosphere','geodist'))"
+RUN Rscript -e "install.packages(c('bit64','data.table','gtools','zoo','rio','geosphere','geodist','ggalt'))"
 
 RUN Rscript -e "install.packages(c('forecast','TTR','tseries','fpp','TSstudio','MLmetrics','padr','CausalImpact'))"
 
