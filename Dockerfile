@@ -91,7 +91,7 @@ RUN Rscript -e "install.packages(c('bench','formattable','pscl','rstanarm','baye
 
 RUN Rscript -e "install.packages(c('leaflet','leaflet.extras','chromote','ralger'))"
 
-RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR','solitude','shinyalert','shinyjs','openssl'))"
+RUN Rscript -e "install.packages(c('Ryacas','shinythemes','UpSetR','solitude','shinyalert','shinyjs','openssl','ggspatial'))"
 
 RUN Rscript -e "install.packages(c('treemapify','GWalkR','ggh4x','Robyn','prophet','randomForest'))"
 
