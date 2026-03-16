@@ -111,10 +111,10 @@ RUN Rscript -e "pak::pak('posit-dev/shinychat/pkg-r')"
 RUN Rscript -e "webshot::install_phantomjs()"
 
 RUN Rscript -e "install.packages(c('flowchart','VGAM'))" # VGAM untuk pareto density plot
-RUN Rscript -e 'remotes::install_github("davidsjoberg/ggsankey")'
-RUN Rscript -e 'remotes::install_github("yukiyanai/rgamer")'
+RUN Rscript -e 'pak::pak("davidsjoberg/ggsankey")'
+RUN Rscript -e 'pak::pak("yukiyanai/rgamer")'
 # ada tambahan aidea
-RUN Rscript -e 'remotes::install_github("cpsievert/aidea")'
+RUN Rscript -e 'pak::pak("cpsievert/aidea")'
 
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"
