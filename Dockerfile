@@ -77,15 +77,15 @@ RUN Rscript -e "install.packages(c('bit64','data.table','gtools','zoo','rio','ge
 
 RUN Rscript -e "install.packages(c('forecast','TTR','tseries','fpp','TSstudio','MLmetrics','padr','CausalImpact'))"
 
-RUN Rscript -e "devtools::install_github('PMassicotte/gtrendsR')"
+RUN Rscript -e "pak::pak('PMassicotte/gtrendsR')"
 
-RUN Rscript -e "devtools::install_github('ropensci/skimr')"
+RUN Rscript -e "pak::pak('ropensci/skimr')"
 
 RUN Rscript -e "install.packages(c('epoxy','lavaan','psych','mapview','RPostgres'))"
 
 RUN Rscript -e "install.packages(c('dtplyr','ggridges','klaR','ggtext','ggmap','flexsurv'))"
 
-RUN Rscript -e "remotes::install_github('garretrc/ggvoronoi', dependencies = FALSE)"
+RUN Rscript -e "pak::pak('garretrc/ggvoronoi')"
 
 RUN Rscript -e "install.packages(c('bench','formattable','pscl','rstanarm','bayesplot','tidybayes'))"
 
