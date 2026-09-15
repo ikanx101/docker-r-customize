@@ -60,12 +60,11 @@ RUN apt-get -y update && apt-get install -y  libudunits2-dev libgdal-dev libgeos
 
 RUN apt-get -y update && apt-get install -y python3-pip
 
-RUN curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.26/quarto-1.8.26-linux-amd64.deb
-RUN gdebi quarto-1.8.26-linux-amd64.deb
+# kita ganti arsitektur ARM
+RUN curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-linux-arm64.deb
+RUN sudo gdebi quarto-1.10.18-linux-arm64.deb
 
 RUN quarto install tinytex
-
-RUN quarto install chromium
 
 RUN Rscript -e "install.packages(c('scales','markdown','qcc','ggwordcloud','dbscan','stringdist','ggraph','igraph','proxy','sf','maps','factoextra','tictoc','packrat','rsconnect','shinydashboard','shinymanager','shiny','nomnoml','xaringan','DT','caret','expss','rmdformats','TSP','dplyr','tidyr','readxl','janitor','openxlsx','stringr','knitr','checkmate','htmlwidgets','rvest','ggplot2','txtplot','tidytext','reshape2','readxl','ggpubr','ggrepel','ROI','ompr','ompr.roi','ROI.plugin.glpk','rmarkdown','RSelenium','gganimate','tm','raster'));"
 
@@ -113,8 +112,6 @@ RUN Rscript -e "webshot::install_phantomjs()"
 RUN Rscript -e "install.packages(c('flowchart','VGAM'))" # VGAM untuk pareto density plot
 RUN Rscript -e 'pak::pak("davidsjoberg/ggsankey")'
 RUN Rscript -e 'pak::pak("yukiyanai/rgamer")'
-# ada tambahan aidea
-RUN Rscript -e 'pak::pak("cpsievert/aidea")'
 
 RUN Rscript -e "install.packages('BiocManager')"
 RUN Rscript -e "BiocManager::install('EBImage')"

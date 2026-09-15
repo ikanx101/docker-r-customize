@@ -111,3 +111,9 @@ remote_driver = remoteDriver(remoteServerAddr = "myselcontainer",
                              port = 4444L, browserName = "firefox")
 remote_driver$open()
 ```
+
+---
+
+# _Update_
+
+Arsitektur terbaru saya pindahkan ke ARM64 karena sekarang saya pakai Macbook NEO.
